@@ -1,0 +1,9 @@
+.playerSection {
+    min-width: 30px;
+    max-width: 250px;
+    min-height: 650px;
+    max-height: 1000px;
+    background: #585050;
+    float: right;
+    padding-top: 10px;
+}

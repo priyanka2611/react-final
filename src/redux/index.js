@@ -1,17 +1,7 @@
 import { createStore } from 'redux';
 import makeRootReducer from './reducers';
 
-const store = createStore(makeRootReducer);
+const store = createStore(makeRootReducer, 
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 export default store;
-
-function isMegaPrimeNumber(number="") {
-    let isMegaPrime = false;
-    for(let index=0; index < number.length; index++){
-        
-    }
-}
-
-function isPrimeNumber(number=""){
-
-}
