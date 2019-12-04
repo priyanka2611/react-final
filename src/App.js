@@ -1,11 +1,17 @@
 import React from 'react';
 import './App.css';
-import Player from './components/Player';
 
+import Login from "./Login";
 function App() {
   return (
     <div className="App">
-      <Player></Player>
+      <div>
+        <h1>fgjsgfsdifgdksjf</h1>
+        <h1>fgjsgfsdifgdksjf</h1>
+        <h1>fgjsgfsdifgdksjf</h1>
+        <h1>fgjsgfsdifgdksjf</h1>
+      </div>
+      <Login />
     </div>
   );
 }
