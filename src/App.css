@@ -70,3 +70,32 @@ input {
   position: absolute;
   left: 42%;
 }
+.site-header {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 70%;
+  height: 20%;
+}
+
+.list-style-horizontal{
+  list-style-type: none;
+  display:inline;
+}
+.site-header .header-middle-area {
+  -webkit-box-flex: 1;
+  flex: 1;
+}
+.box-create{
+  background-color: lightgrey;
+  width: 300px;
+  border: 3px solid black;
+  padding: 5px;
+  margin: 5px;
+}
+
+.login-box-hide{
+  display: none;
+}

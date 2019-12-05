@@ -11,7 +11,6 @@ const PlayerReducer = (state=initialState, action) => {
             return {
                 player: !state.player
             };
-
         default:
             return state;
     }
