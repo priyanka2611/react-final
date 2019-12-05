@@ -8,7 +8,7 @@ class HeaderComponent extends Component {
     const MAX_USER_SIZE = 10;
     return (
 
-      <div className='site-header'>
+      <div className='site-header horizontal-align-header'>
         <div className='header-middle-area'>
           <h4>Operation Title</h4>
           <h3>OP-TITLE</h3>

@@ -5,7 +5,23 @@
 .App-logo {
   height: 40vmin;
 }
-
+.align-right{
+  float:right; 
+  background:blue; 
+  width:25%; 
+ 
+}
+.horizontal-align-header{
+  float: left;
+    width: 65%;
+    background:#808080 ;
+}
+.horizontal-align{
+  float: left;
+  width: 70%;
+  text-align: center;
+  background: darkgrey;
+}
 .App-header {
   min-height: 100vh;
   display: flex;

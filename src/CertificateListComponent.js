@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import _ from 'lodash';
 class CertificateListComponent extends Component {
  
   render() {
    return (
-      <div className = 'box-create'>
+      <div className = 'box-create '>
        <div className="p-5 pl-10 certificate-bg-color">
                             <div className="flex fcontent-space-between">
                                 <div><label><i className="fa fa-thumbs-up"></i> HEADER-TECH2</label></div>
