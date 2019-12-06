@@ -53,14 +53,15 @@ class Login extends Component {
     this.props.dispatch({
       type: 'ADD_CHECK', data
     })
+    setTimeout(()=> {
+      this.props.dispatch({
+        type:"LOGOUT"
+      })
+    },15*1000)
   }
   onChangeVal = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
-  validate=(evt)=>{
-      
-    evt.preventDefault();
-  }
 
   render() {
     let LoginCover= null;
@@ -76,7 +77,6 @@ class Login extends Component {
       
         <div className={LoginCover}>
           <div className={Login}>
-            <form onSubmit={this.handleSubmit}>
               {
                 this.state.error &&
                 <h3 data-test="error" onClick={this.dismissError}>
@@ -90,10 +90,9 @@ class Login extends Component {
               <label>PASSWORD</label>
               <input type="password" name ="password" value={this.state.password} placeholder="Enter your password"  onChange={this.onChangeVal} />
               <br/>
-              <button type="submit" onClick= {this.Validate} >
+              <button type="button" onClick={this.handleSubmit} >
                 Login
             </button>
-            </form>
           </div>
           </div>
                

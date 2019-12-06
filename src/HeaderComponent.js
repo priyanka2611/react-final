@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
-import _ from 'lodash';
+import { connect } from 'react-redux';
+import { IoIosCheckmarkCircleOutline,IoIosCheckmarkCircle } from "react-icons/io";
 
 class HeaderComponent extends Component {
  
+  selectUnit = (event) => {
+    const selectedUnit = event.target.value;
+    this.props.setCurrentUnit(selectedUnit);
+
+  }
   render() {
-    const MAX_USER_SIZE = 10;
+    const circleOutline = true ? <IoIosCheckmarkCircleOutline/> : null
     return (
 
       <div className='site-header horizontal-align-header'>
@@ -26,14 +32,24 @@ class HeaderComponent extends Component {
           <h3>1</h3>
         </div>
         <div className='header-middle-area'>
-        <h4>Unit</h4>
-        <select>
-           { _.range(1, MAX_USER_SIZE + 1).map(value => <option key={value} value={value}>{value}</option>) }
+        <h4>Unit {circleOutline}</h4>
+        <select onChange={this.selectUnit}>
+        {this.props.units.map(value => <option key={value} value={value}>{value}</option>) }
         </select>
         </div>
       </div>
     );
   }
 }
+const mapStateToProps = (state) => {
+  return {
+    units: Object.keys(state.unitReducer.unitCertificates)
+  }
+}
 
-export default HeaderComponent;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setCurrentUnit: (unitVal)=> dispatch({type:"SET_UNIT",payload:unitVal})
+  }
+}
+export default connect(mapStateToProps,mapDispatchToProps)(HeaderComponent);

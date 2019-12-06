@@ -1,9 +1,8 @@
 import React from 'react';
 import './Player.css'
-import PlayButton from './PlayButton';
-import PauseButton from './PauseButton';
+import PlayButton from './PlayButton/PlayButton';
+import PauseButton from './PauseButton/PauseButton';
 import { connect } from 'react-redux';
-import { togglePlayerStatus } from '../../redux/actions/Player';
 
 class Player extends React.Component {
     constructor(props) {
@@ -37,13 +36,13 @@ class Player extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        playing: state.player
+        playing: state.playerReducer.player
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        togglePlayerStatus: () => { dispatch(togglePlayerStatus()) }
+        togglePlayerStatus: () => { dispatch({type: 'TOGGLE_PLATER_STATUS'}) }
     }
 }
 

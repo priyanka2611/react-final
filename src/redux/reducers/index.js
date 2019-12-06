@@ -1,11 +1,13 @@
 import { combineReducers } from 'redux';
 import PlayerReducer from './PlayerReducer';
 import LoginCheckReducer from './LoginCheckReducer';
+import CertificateReducer from './CertificateReducer';
 //Here we will import our reducers
 
 const reducers = {
-    player: PlayerReducer,
-    loginState : LoginCheckReducer
+    playerReducer: PlayerReducer,
+    userReducer : LoginCheckReducer,
+    unitReducer:CertificateReducer
     //here we will place our reducers name imported above
 }
 

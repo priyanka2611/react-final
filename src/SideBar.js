@@ -1,17 +1,26 @@
 import React, { Component } from 'react';
 import './App.css';
+import { MdTune } from 'react-icons/md';
 import CertificateListComponent from './CertificateListComponent';
-
+import { connect } from 'react-redux';
+import {toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 class SideBar extends Component {
- 
+  constructor(props){
+    super(props);
+  }
+  showToaster = ()=>{
+    toast.error("Error Notification !", {
+      position: toast.POSITION.TOP_RIGHT
+    });
+  }
   render() {
-    var CERTIFICATES_LIST = ['MFG','TECH','MFG2', 'TECH2', 'QA', 'INSP','CUST'];
     return (
       <div className='align-right'>
-        <p>Need to Collect <span className="fas fa-filter"></span></p>
+            <div><label> Need to Collect <MdTune style={{float:"right"}}/></label></div>
 <ul className='list-style-horizontal'>
-                {CERTIFICATES_LIST.map(function(certificate, index){
-                    return <li className='list-style-horizontal' key={ index }>  <CertificateListComponent/>  </li>;
+                {Object.keys(this.props.certificateList).map((certificate, index)=>{
+                    return <li className='list-style-horizontal' key={ index }>  <CertificateListComponent certName={certificate} certVal={this.props.certificateList[certificate]} handledPausedPlayer={this.showToaster}/>  </li>;
                   })}
             </ul>
       </div>
@@ -19,4 +28,11 @@ class SideBar extends Component {
   }
 }
 
-export default SideBar;
+const mapStateToProps = (state) => {
+  return {
+    certificateList: state.unitReducer.unitCertificates[state.unitReducer.currentUnit]
+    
+  }
+ }
+
+export default connect(mapStateToProps) (SideBar);
