@@ -12,7 +12,10 @@ function App() {
     <div className="App">
         <Player/>
       <div>
-      {/* <Login/> */}
+        <div>
+        <Login/>
+        </div>
+    
         <HeaderComponent/>
       </div>
      <SideBar/>

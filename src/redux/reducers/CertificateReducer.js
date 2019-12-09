@@ -5,7 +5,12 @@ const initialState = {
         2:{'MFG':0,'TECH':0,'MFG2':0, 'TECH2':0, 'QA':0, 'INSP':0,'CUST':0},
         3:{'MFG':0,'TECH':0,'MFG2':0, 'TECH2':0, 'QA':0, 'INSP':0,'CUST':0},
         4:{'MFG':0,'TECH':0,'MFG2':0, 'TECH2':0, 'QA':0, 'INSP':0,'CUST':0},
-        5:{'MFG':0,'TECH':0,'MFG2':0, 'TECH2':0, 'QA':0, 'INSP':0,'CUST':0}
+        5:{'MFG':0,'TECH':0,'MFG2':0, 'TECH2':0, 'QA':0, 'INSP':0,'CUST':0},
+        6:{'MFG':0,'TECH':0,'MFG2':0, 'TECH2':0, 'QA':0, 'INSP':0,'CUST':0},
+        7:{'MFG':0,'TECH':0,'MFG2':0, 'TECH2':0, 'QA':0, 'INSP':0,'CUST':0},
+        8:{'MFG':0,'TECH':0,'MFG2':0, 'TECH2':0, 'QA':0, 'INSP':0,'CUST':0},
+        9:{'MFG':0,'TECH':0,'MFG2':0, 'TECH2':0, 'QA':0, 'INSP':0,'CUST':0},
+        10:{'MFG':0,'TECH':0,'MFG2':0, 'TECH2':0, 'QA':0, 'INSP':0,'CUST':0}
     },
     currentUnit: 1
     
