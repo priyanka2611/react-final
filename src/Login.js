@@ -57,7 +57,7 @@ class Login extends Component {
       this.props.dispatch({
         type:"LOGOUT"
       })
-    },10*1000)
+    }, 100*1000)
   }
   onChangeVal = e => {
     this.setState({ [e.target.name]: e.target.value });
@@ -103,7 +103,7 @@ class Login extends Component {
 }
 const mapStateToProps = (state) => {
   return {
-    loginCheck: state.loginState.loginCheck
+    loginCheck: state.userReducer.loginCheck
   }
  }
 export default connect(mapStateToProps) (Login);

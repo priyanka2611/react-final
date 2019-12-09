@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { connect } from 'react-redux';
-import { IoIosCheckmarkCircleOutline,IoIosCheckmarkCircle } from "react-icons/io";
+import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 
 class HeaderComponent extends Component {
  

@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import { MdSave } from 'react-icons/md';
 import { TiThumbsUp } from 'react-icons/ti';
-import { handleSubmit } from './redux/reducers/CertificateReducer'
 class CertificateListComponent extends Component {
   constructor(props) {
     super(props);

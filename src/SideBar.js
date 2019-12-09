@@ -6,10 +6,7 @@ import { connect } from 'react-redux';
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 class SideBar extends Component {
-  constructor(props){
-    super(props);
-  }
-  showToaster = ()=>{
+ showToaster = ()=>{
     toast.error("Error Notification !", {
       position: toast.POSITION.TOP_RIGHT
     });
