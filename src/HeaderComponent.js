@@ -4,14 +4,14 @@ import { connect } from 'react-redux';
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 
 class HeaderComponent extends Component {
- 
+
   selectUnit = (event) => {
     const selectedUnit = event.target.value;
     this.props.setCurrentUnit(selectedUnit);
 
   }
   render() {
-    const circleOutline = true ? <IoIosCheckmarkCircleOutline/> : null
+    const circleOutline = true ? <IoIosCheckmarkCircleOutline /> : null
     return (
 
       <div className='site-header horizontal-align-header'>
@@ -32,10 +32,10 @@ class HeaderComponent extends Component {
           <h3>1</h3>
         </div>
         <div className='header-middle-area'>
-        <h4>Unit {circleOutline}</h4>
-        <select onChange={this.selectUnit}>
-        {this.props.units.map(value => <option key={value} value={value}>{value}</option>) }
-        </select>
+          <h4>Unit {circleOutline}</h4>
+          <select onChange={this.selectUnit}>
+            {this.props.units.map(value => <option key={value} value={value}>{value}</option>)}
+          </select>
         </div>
       </div>
     );
@@ -49,7 +49,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    setCurrentUnit: (unitVal)=> dispatch({type:"SET_UNIT",payload:unitVal})
+    setCurrentUnit: (unitVal) => dispatch({ type: "SET_UNIT", payload: unitVal })
   }
 }
-export default connect(mapStateToProps,mapDispatchToProps)(HeaderComponent);
+export default connect(mapStateToProps, mapDispatchToProps)(HeaderComponent);

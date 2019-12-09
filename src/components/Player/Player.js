@@ -5,19 +5,8 @@ import PauseButton from './PauseButton/PauseButton';
 import { connect } from 'react-redux';
 
 class Player extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            playing: false
-        }
-    }
 
     handlePlayerClick = () => {
-        if (!this.state.playing) {
-            this.setState({playing: true})
-        } else {
-            this.setState({playing: false})
-        }
         this.props.togglePlayerStatus();
     }
 
@@ -25,7 +14,7 @@ class Player extends React.Component {
         return(
             <div className="playerSection">
                 {
-                    this.state.playing ? 
+                    this.props.playing ? 
                     <PauseButton onPlayerClick={this.handlePlayerClick} /> : 
                     <PlayButton onPlayerClick={this.handlePlayerClick} />
                 }

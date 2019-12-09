@@ -13,11 +13,11 @@ class CertificateListComponent extends Component {
 
   }
   saveCertdata = () => {
-    if(this.props.playerStatus){
+    if (this.props.playerStatus) {
       const data = { certName: this.props.certName, certVal: this.state.status };
       this.props.saveData(data)
     }
-    else{
+    else {
       this.props.handledPausedPlayer();
     }
   }

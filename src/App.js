@@ -10,17 +10,17 @@ toast.configure()
 function App() {
   return (
     <div className="App">
-        <Player/>
+      <Player />
       <div>
         <div>
-        <Login/>
+          <Login />
         </div>
-    
-        <HeaderComponent/>
+
+        <HeaderComponent />
       </div>
-     <SideBar/>
-     <CertificationComponent/>
-    
+      <SideBar />
+      <CertificationComponent />
+
     </div>
   );
 }
