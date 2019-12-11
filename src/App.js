@@ -1,24 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import Player from './components/Player/Player'
+import Login from "./Login";
+import HeaderComponent from './HeaderComponent'
+import SideBar from './SideBar'
+import CertificationComponent from './CertificationComponent';
+import { toast } from 'react-toastify';
+toast.configure()
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Player />
+      <div>
+        <div>
+          <Login />
+        </div>
+
+        <HeaderComponent />
+      </div>
+      <SideBar />
+      <CertificationComponent />
+
     </div>
   );
 }
