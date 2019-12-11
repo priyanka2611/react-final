@@ -58,7 +58,7 @@ class Login extends Component {
       this.props.dispatch({
         type: "LOGOUT"
       })
-    }, 100 * 1000)
+    }, 1000 * 1000)
   }
   onChangeVal = e => {
     this.setState({ [e.target.name]: e.target.value });

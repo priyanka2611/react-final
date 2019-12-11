@@ -49,7 +49,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    setCurrentUnit: (unitVal) => dispatch({ type: "SET_UNIT", payload: unitVal })
+    setCurrentUnit: (unitVal) => dispatch({ type: "SET_UNIT", payload: unitVal }) //unit val has value of selected dropdown
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(HeaderComponent);
